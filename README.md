@@ -8,7 +8,7 @@ All examples, unless otherwise noted on comments, should work in pure python jus
 * `cimport`
 * `@cython`
 
-# Good practices
+## Good practices
 * Don't declare and initialize cython typed variables in one statement. Transform thing like
     `cdef int x = 0` to
     `cdef int x
@@ -16,7 +16,7 @@ All examples, unless otherwise noted on comments, should work in pure python jus
 
 * Numpy arrays of n dimensions must be defined as n-dimensional in cython as well. the format is `cdef np.ndarray[<type>, __ndim=<number of dimensions>__]`
 
-Next steps:
+## Next steps:
 * Write a preprocessor to eliminate the cython lines
 * Change lines that do not follow the best practices above so that preprocessed scripts can run in standard python
 * Wrap all this inside a python package so that cython code can be executed (almost) natively in python.
